@@ -1,5 +1,10 @@
 {
   "sections": {
+    "slider_install_EiEbcz": {
+      "type": "slider-install",
+      "settings": {
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -108,17 +113,12 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "slider_install_EiEbcz": {
-      "type": "slider-install",
-      "settings": {
-      }
     }
   },
   "order": [
+    "slider_install_EiEbcz",
     "image_banner",
     "featured_collection",
-    "rich_text_iKaGky",
-    "slider_install_EiEbcz"
+    "rich_text_iKaGky"
   ]
 }
