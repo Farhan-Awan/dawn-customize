@@ -108,11 +108,17 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "slider_install_EiEbcz": {
+      "type": "slider-install",
+      "settings": {
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "rich_text_iKaGky"
+    "rich_text_iKaGky",
+    "slider_install_EiEbcz"
   ]
 }
