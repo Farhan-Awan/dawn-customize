@@ -36,6 +36,7 @@
 
 </script>
 {% endcomment %}
+<script>
 $(document).ready(function() {
     $(document).on('click', '#collection-cart-{{ product.id }}', function(){
         let vargetid = $(this).parents('.custom-ajax-addtocart').find('#getvarid').val();
@@ -66,3 +67,4 @@ $(document).ready(function() {
         });
     });
 });
+</script>
