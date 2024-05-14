@@ -2,7 +2,7 @@
   {% for variant in product.variants %}
   <input type="hidden" id="getvarid" value="{{ variant.id }}">
     {% endfor %}
-  <button type="button" name="add" id="collection-cart-{{ product.id }}"> add to cart</button>
+  <button type="button" class="ajax-cart-btn" name="add" id="collection-cart-{{ product.id }}"> add to cart</button>
 </div>
 {% comment %}
 <script>
