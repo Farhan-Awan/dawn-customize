@@ -113,12 +113,20 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "beer_reaveal_zpmwYg": {
+      "type": "beer-reaveal",
+      "settings": {
+        "before_image": "shopify:\/\/shop_images\/AB004PM_SHOE_LEFT_GLOBAL_MENS_TREE_PIPER_DREAMY_GREEN_CREAM_HUSH_326423b0-0463-4882-9b97-b4eb299d6109.png",
+        "after_image": "shopify:\/\/shop_images\/TR3MMST080_SHOE_LEFT_GLOBAL_MENS_TREE_RUNNER_MIST_WHITE_151915d9-f42a-4cbd-8a94-5802a9a04ed7.png"
+      }
     }
   },
   "order": [
     "slider_install_EiEbcz",
     "image_banner",
     "featured_collection",
-    "rich_text_iKaGky"
+    "rich_text_iKaGky",
+    "beer_reaveal_zpmwYg"
   ]
 }
