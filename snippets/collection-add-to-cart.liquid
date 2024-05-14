@@ -8,7 +8,7 @@
 <script>
   $(document).on('click', '#collection-cart-{{ product.id }}', function(){
     let vargetid = $(this).parents('.custom-ajax-addtocart').find('#getvarid').val();
-    console.log('ok:'+ vargetid);
+    //console.log('ok:'+ vargetid);
     let formobj = {
       quantity: 1,
       id: vargetid
