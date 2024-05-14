@@ -55,10 +55,12 @@ $(document).ready(function() {
                 $('.cart-count-bubble').click();
                 $('cart-drawer').removeClass('is-empty');
                 $('.drawer__inner-empty').hide();
-
                 // Refresh the cart drawer content
                 $('.drawer').load('/cart #CartDrawer', function() {
                     console.log('Cart drawer content refreshed');
+                });
+                $('.cart-count-bubble').load('/cart .cart-count-bubble', function() {
+                    console.log('Cart count bubble refreshed');
                 });
             },
             error: function(xhr, ajaxOption, thrownError){
