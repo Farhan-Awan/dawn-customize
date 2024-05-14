@@ -67,8 +67,10 @@ $(document).ready(function() {
                 $('.drawer').load('/cart #CartDrawer', function() {
                     console.log('Cart drawer content refreshed');
                 });
-              // Refresh the cart drawer bubble count
-                $('.cart-count-bubble').load('/cart .cart-count-bubble', function() {
+               $.getJSON('/cart.js', function(cart) {
+                    var itemCount = cart.item_count;
+                    $('.cart-count-bubble span[aria-hidden="true"]').text(itemCount);
+                    $('.cart-count-bubble .visually-hidden').text(itemCount + ' items');
                     console.log('Cart count bubble refreshed');
                 });
             },
