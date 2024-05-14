@@ -61,7 +61,6 @@ $(document).ready(function() {
                     console.log('Cart drawer content refreshed');
                 });
               $.getJSON('/cart.js', function(cart) {
-                console.log('cart data:'+ cart);
                     var itemCount = cart.item_count;
                     $('.cart-count-bubble span[aria-hidden="true"]').text(itemCount);
                     $('.cart-count-bubble .visually-hidden').text(itemCount + ' items');
