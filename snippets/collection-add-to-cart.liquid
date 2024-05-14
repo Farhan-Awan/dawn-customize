@@ -21,7 +21,7 @@
       dataType: "json",
       success: function(data){
         console.log('product add to cart success');
-        $('cart-drawer').removeClasss('is-empty');
+        $('cart-drawer').removeClass('is-empty');
         $('.drawer__inner-empty').hide();
         $('cart-drawer').load(location.href + "#CartDrawer");
       },
