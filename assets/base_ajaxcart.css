@@ -3,3 +3,6 @@
     position: relative;
     z-index: 6;
 }
+.custom-ajax-addtocart:hover * {
+    cursor: pointer;
+}
