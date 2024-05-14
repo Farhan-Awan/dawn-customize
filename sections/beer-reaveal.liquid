@@ -37,8 +37,8 @@
 </style>
 <div class="before-after-container">
   <div class="before-after-wrapper">
-    <div class="before-image" style="background-image: url({{ section.settings.before_image | img_url: 'master' }});"></div>
-    <div class="after-image" style="background-image: url({{ section.settings.after_image | img_url: 'master' }});"></div>
+    <div class="before-image" style="background-image: url({{ section.settings.before_image | image_url: 'master' }});"></div>
+    <div class="after-image" style="background-image: url({{ section.settings.after_image | image_url: 'master' }});"></div>
     <input type="range" min="0" max="100" value="50" class="slider" id="slider">
   </div>
 </div>
