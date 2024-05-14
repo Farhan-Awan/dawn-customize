@@ -1,6 +1,81 @@
+
+<style>
+.before-after-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.before-after-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.before-image, .after-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.after-image {
+  clip: rect(0, 50%, auto, 0);
+}
+
+.slider {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  z-index: 10;
+}
+</style>
+<div class="before-after-container">
+  <div class="before-after-wrapper">
+    <div class="before-image" style="background-image: url({{ section.settings.before_image | img_url: 'master' }});"></div>
+    <div class="after-image" style="background-image: url({{ section.settings.after_image | img_url: 'master' }});"></div>
+    <input type="range" min="0" max="100" value="50" class="slider" id="slider">
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var slider = document.getElementById('slider');
+  var afterImage = document.querySelector('.after-image');
+
+  slider.addEventListener('input', function() {
+    var value = slider.value;
+    afterImage.style.clip = 'rect(0, ' + value + '%, auto, 0)';
+  });
+});
+</script>
+
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Before and After Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "before_image",
+      "label": "Before Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "after_image",
+      "label": "After Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Before and After Image",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
