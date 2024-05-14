@@ -10,6 +10,24 @@
   $(document).on('click', '#collection-cart-{{ product.id }}', function(){
     let vargetid = $(this).parents('.custom-ajax-addtocart').find('#getvarid').val();
     console.log('ok:'+ vargetid);
+    let formobj = {
+      quantity: 1,
+      id: vargetid
+    };
+    $.ajax({
+      type: "POST",
+      url: "/cart/add.js",
+      cache: false,
+      data: formobj,
+      datatype: "json",
+      success: function(data){
+        console.log('product add to cart success');
+      },
+      error: function(xhr, ajaxOption, thrownError){
+        console.log("error in adding product")
+      }
+    })
+ 
   });
   });
 </script>
