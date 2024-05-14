@@ -1,9 +1,16 @@
-
+{%  assign availabale = product.selected_or_first_available_variant.available %}
 <div class="custom-ajax-addtocart">
   {% for variant in product.variants %}
   <input type="hidden" id="getvarid" value="{{ variant.id }}">
     {% endfor %}
-  <button type="button" class="ajax-cart-btn" name="add" id="collection-cart-{{ product.id }}"> add to cart</button>
+  <button type="button" class="ajax-cart-btn" name="add" id="collection-cart-{{ product.id }}">
+    {% if availabale == true %}
+    Add To Cart  
+      {% else %}
+      Sold Out
+    {% endif %}
+    
+  </button>
 </div>
 {% comment %}
 <script>
