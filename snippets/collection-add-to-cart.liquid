@@ -4,7 +4,7 @@
     {% endfor %}
   <button type="button" name="add" id="collection-cart-{{ product.id }}"> add to cart</button>
 </div>
-
+{% comment %}
 <script>
   $(document).on('click', '#collection-cart-{{ product.id }}', function(){
     let vargetid = $(this).parents('.custom-ajax-addtocart').find('#getvarid').val();
@@ -27,9 +27,12 @@
         $('cart-drawer').load(location.href + "#CartDrawer");
         
       },
-      error: function(xhr, ajaxOption, thrownError){console.log("error in adding product");}
+      error: function(xhr, ajaxOption, thrownError){
+        console.log("error in adding product");
+      }
     });
  
   });
 
 </script>
+{% endcomment %}
