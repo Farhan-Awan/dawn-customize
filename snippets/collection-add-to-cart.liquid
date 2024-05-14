@@ -18,14 +18,14 @@
       url: "/cart/add.js",
       cache: false,
       data: formobj,
-      datatype: "json",
+      dataType: "json",
       success: function(data){
         console.log('product add to cart success');
       },
       error: function(xhr, ajaxOption, thrownError){
         console.log("error in adding product")
       }
-    })
+    });
  
   });
 
