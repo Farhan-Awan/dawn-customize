@@ -24,6 +24,7 @@
         $('cart-drawer').removeClass('is-empty');
         $('.drawer__inner-empty').hide();
         $('cart-drawer').load(location.href + "#CartDrawer");
+        $('.cart-count-bubble').click();
       },
       error: function(xhr, ajaxOption, thrownError){console.log("error in adding product");}
     });
