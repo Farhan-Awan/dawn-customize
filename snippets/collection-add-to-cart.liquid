@@ -1,1 +1,4 @@
-<div class="custom-ajax-addtocart" name="add" id="collection-cart-{{ product.id }}"><button> add to cart</button></div>
+<div class="custom-ajax-addtocart">
+  <input type="hidden" id="getvarid" value="{{ variant.id }}">
+  <button type="button" name="add" id="collection-cart-{{ product.id }}"> add to cart</button>
+</div>
