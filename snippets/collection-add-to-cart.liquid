@@ -36,3 +36,33 @@
 
 </script>
 {% endcomment %}
+$(document).ready(function() {
+    $(document).on('click', '#collection-cart-{{ product.id }}', function(){
+        let vargetid = $(this).parents('.custom-ajax-addtocart').find('#getvarid').val();
+        let formobj = {
+            quantity: 1,
+            id: vargetid
+        };
+        $.ajax({
+            type: "POST",
+            url: "/cart/add.js",
+            cache: false,
+            data: formobj,
+            dataType: "json",
+            success: function(data){
+                console.log('Product added to cart successfully');
+                $('.cart-count-bubble').click();
+                $('cart-drawer').removeClass('is-empty');
+                $('.drawer__inner-empty').hide();
+
+                // Refresh the cart drawer content
+                $('.drawer').load('/cart #CartDrawer', function() {
+                    console.log('Cart drawer content refreshed');
+                });
+            },
+            error: function(xhr, ajaxOption, thrownError){
+                console.log("Error in adding product");
+            }
+        });
+    });
+});
