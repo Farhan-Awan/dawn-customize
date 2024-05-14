@@ -6,7 +6,6 @@
 </div>
 
 <script>
-  $(document).ready(function(){
   $(document).on('click', '#collection-cart-{{ product.id }}', function(){
     let vargetid = $(this).parents('.custom-ajax-addtocart').find('#getvarid').val();
     console.log('ok:'+ vargetid);
@@ -29,5 +28,5 @@
     })
  
   });
-  });
+
 </script>
